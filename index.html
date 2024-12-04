@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+
+    <!-- Collegamento a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEJx3LN6K3xoVA4rV9uLz03PZ88A16w4R5d98xyldK1xx9VZYT5i5otKT+JzwL" crossorigin="anonymous">
+
+    <!-- Collegamento a Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-dROUV1J0V5+MEYK7F1Ecltyt6ZgQbE5fVoAW+23FfN5MylnC+vH+W82sFrEyZgXB"
+        crossorigin="anonymous"></script>
+
+    <!-- Collegamento al file CSS personalizzato -->
+    <style>
+        body {
+            background-color: #f4f4f9;
+        }
+
+        .btn-warning {
+            background-color: #f0ad4e;
+            border-color: #eea236;
+        }
+
+        .btn-warning:hover {
+            background-color: #ec971f;
+            border-color: #d58512;
+        }
+
+        .text-center {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="text-center bg-white p-5 shadow-lg rounded">
+        <h1 class="display-4 text-primary mb-4">Timer</h1>
+
+        <div class="mb-3">
+            <label for="countdown-input" class="form-label">Inserisci il tempo in secondi:</label>
+            <input type="number" id="countdown-input" class="form-control text-center" placeholder="Es. 60" min="1"
+                max="3600">
+        </div>
+
+        <p class="lead">Tempo rimanente: <span id="remainingTime" class="fw-bold text-danger">--</span></p>
+
+        <div class="d-flex justify-content-center gap-3">
+            <button id="startBtn" class="btn btn-lg btn-warning">Start</button>
+            <button id="stopBtn" class="btn btn-lg btn-warning">Stop</button>
+            <button id="resetBtn" class="btn btn-lg btn-warning">Reset</button>
+        </div>
+    </div>
+
+    <!-- Collegamento al file JavaScript -->
+    <script src="main.js"></script>
+</body>
+
+</html>
